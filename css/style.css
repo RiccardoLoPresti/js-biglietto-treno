@@ -1,0 +1,32 @@
+
+main{
+  background-color: #b91450!important;
+  height: 100vh;
+}
+
+.rl_box{
+  width: 100%;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.418);
+}
+
+.rl_card{
+  width: 300px;
+  height: 200px;
+  background-color: gray;
+}
+
+.debug{
+  background-color: aquamarine;
+  border: 1px solid black;
+}
+
+.rl_form{
+  height: 34px;
+}
+
+.form-select.rl_form{
+  margin-top: 14px;
+  width: 200px;
+}
