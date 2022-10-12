@@ -93,9 +93,3 @@ btn2.addEventListener('click', function(){
   document.getElementById('code').innerHTML = '';
   document.getElementById('cost').innerHTML = '';
 });
-
-
-
-
-
-
