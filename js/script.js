@@ -19,7 +19,7 @@ if(calcoloValido){
   const etaUtente = parseInt(prompt('Quanti anni hai?'));
 
   if(etaUtente >= 18 && etaUtente < 65){
-    output = (Math.round(prezzoBiglietto * 100) / 100).toFixed(2); 
+    output = prezzoBiglietto.toFixed(2); 
   
     document.getElementById('prezzo').innerHTML =`
       Il prezzo del biglietto non è soggetto a sconti, il costo totale è di: <br> 
@@ -30,7 +30,7 @@ if(calcoloValido){
   if(etaUtente < 18){
     const scontoTotaleMinorenni = prezzoBiglietto * scontoMinorenni;
     const prezzoBigliettoScontatoMinorenni = prezzoBiglietto - scontoTotaleMinorenni;
-    output = (Math.round(prezzoBigliettoScontatoMinorenni * 100) / 100).toFixed(2);
+    output = prezzoBigliettoScontatoMinorenni.toFixed(2);
       
     document.getElementById('prezzo').innerHTML =`
       Il prezzo del biglietto è soggetto allo sconto minorenne del ${scontoMinorenni * 100}%, il costo totale è di: <br>
@@ -42,7 +42,7 @@ if(calcoloValido){
     const scontoTotaleOver = prezzoBiglietto * scontoOver;
     const prezzoBigliettoScontatoOver = prezzoBiglietto - scontoTotaleOver;
     
-    output = (Math.round(prezzoBigliettoScontatoOver * 100) / 100).toFixed(2);
+    output = prezzoBigliettoScontatoOver.toFixed(2);
      
     document.getElementById('prezzo').innerHTML =`
       Il prezzo del biglietto è soggetto allo sconto over 65 del ${scontoOver * 100}%, il costo totale è di: <br>
