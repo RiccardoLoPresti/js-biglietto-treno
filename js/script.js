@@ -11,9 +11,7 @@ btn1.addEventListener('click', function(){
   const nameSurname = document.getElementById('name').value
   const userNumberKm = document.getElementById('km').value
   const userAge = document.getElementById('eta').value
-
   const ticketCost = costForKm * userNumberKm;
-  console.log(('costo biglietto'), ticketCost);
 
   if(nameSurname === '' || !isNaN(nameSurname)){
     alert('Si prega di inserire un Nome e un Cognome!');
@@ -28,6 +26,10 @@ btn1.addEventListener('click', function(){
   }
 
   if(ValidData){
+
+    const show = document.querySelector('.rl_box.ticket');
+    show.classList.add('d-block');
+    show.classList.remove('d-none');
   
     if(userAge === 'maggiorenne'){
       output = ticketCost.toFixed(2); 
@@ -85,6 +87,8 @@ btn1.addEventListener('click', function(){
 
 const btn2 = document.getElementById('flush');
 btn2.addEventListener('click', function(){ 
+  const hide = document.querySelector('.rl_box.ticket');
+  hide.classList.add('d-none');
   document.getElementById('name').value = '';
   document.getElementById('km').value = '';
   document.getElementById('name-output').innerHTML = '';
